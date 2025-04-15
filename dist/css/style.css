@@ -1,0 +1,391 @@
+@charset "UTF-8";
+:root {
+  --grid-columns: 12;
+  --gutter: 15px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Базовый контейнер */
+.container {
+  width: 100%;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+/* Сетка на Grid */
+.row {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--gutter);
+  margin-right: calc(-1 * var(--gutter));
+  margin-left: calc(-1 * var(--gutter));
+}
+
+/* Общие классы колонок */
+[class^=col-] {
+  grid-column: span var(--grid-columns);
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+}
+
+/* Генерация колонок (1-12) */
+.col-1 {
+  grid-column: span 1;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+.col-5 {
+  grid-column: span 5;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-7 {
+  grid-column: span 7;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-10 {
+  grid-column: span 10;
+}
+
+.col-11 {
+  grid-column: span 11;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+/* Адаптивные классы */
+/* sm (≥576px) */
+@media (min-width: 576px) {
+  .col-sm-1 {
+    grid-column: span 1;
+  }
+  .col-sm-2 {
+    grid-column: span 2;
+  }
+  .col-sm-3 {
+    grid-column: span 3;
+  }
+  .col-sm-4 {
+    grid-column: span 4;
+  }
+  .col-sm-5 {
+    grid-column: span 5;
+  }
+  .col-sm-6 {
+    grid-column: span 6;
+  }
+  .col-sm-7 {
+    grid-column: span 7;
+  }
+  .col-sm-8 {
+    grid-column: span 8;
+  }
+  .col-sm-9 {
+    grid-column: span 9;
+  }
+  .col-sm-10 {
+    grid-column: span 10;
+  }
+  .col-sm-11 {
+    grid-column: span 11;
+  }
+  .col-sm-12 {
+    grid-column: span 12;
+  }
+}
+/* md (≥768px) */
+@media (min-width: 768px) {
+  .col-md-1 {
+    grid-column: span 1;
+  }
+  .col-md-2 {
+    grid-column: span 2;
+  }
+  .col-md-3 {
+    grid-column: span 3;
+  }
+  .col-md-4 {
+    grid-column: span 4;
+  }
+  .col-md-5 {
+    grid-column: span 5;
+  }
+  .col-md-6 {
+    grid-column: span 6;
+  }
+  .col-md-7 {
+    grid-column: span 7;
+  }
+  .col-md-8 {
+    grid-column: span 8;
+  }
+  .col-md-9 {
+    grid-column: span 9;
+  }
+  .col-md-10 {
+    grid-column: span 10;
+  }
+  .col-md-11 {
+    grid-column: span 11;
+  }
+  .col-md-12 {
+    grid-column: span 12;
+  }
+}
+/* lg (≥992px) */
+@media (min-width: 992px) {
+  .col-lg-1 {
+    grid-column: span 1;
+  }
+  .col-lg-2 {
+    grid-column: span 2;
+  }
+  .col-lg-3 {
+    grid-column: span 3;
+  }
+  .col-lg-4 {
+    grid-column: span 4;
+  }
+  .col-lg-5 {
+    grid-column: span 5;
+  }
+  .col-lg-6 {
+    grid-column: span 6;
+  }
+  .col-lg-7 {
+    grid-column: span 7;
+  }
+  .col-lg-8 {
+    grid-column: span 8;
+  }
+  .col-lg-9 {
+    grid-column: span 9;
+  }
+  .col-lg-10 {
+    grid-column: span 10;
+  }
+  .col-lg-11 {
+    grid-column: span 11;
+  }
+  .col-lg-12 {
+    grid-column: span 12;
+  }
+}
+/* xl (≥1200px) */
+@media (min-width: 1200px) {
+  .col-xl-1 {
+    grid-column: span 1;
+  }
+  .col-xl-2 {
+    grid-column: span 2;
+  }
+  .col-xl-3 {
+    grid-column: span 3;
+  }
+  .col-xl-4 {
+    grid-column: span 4;
+  }
+  .col-xl-5 {
+    grid-column: span 5;
+  }
+  .col-xl-6 {
+    grid-column: span 6;
+  }
+  .col-xl-7 {
+    grid-column: span 7;
+  }
+  .col-xl-8 {
+    grid-column: span 8;
+  }
+  .col-xl-9 {
+    grid-column: span 9;
+  }
+  .col-xl-10 {
+    grid-column: span 10;
+  }
+  .col-xl-11 {
+    grid-column: span 11;
+  }
+  .col-xl-12 {
+    grid-column: span 12;
+  }
+}
+/* Отступы */
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+/* Вспомогательные классы */
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --font-family: "ABeeZee", sans-serif;
+  --font-size: 18px;
+  --font-weight: 400;
+  --main-color-1: #3793A2;
+  --btn-color: #EDAD03;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--main-color-3);
+}

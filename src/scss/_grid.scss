@@ -1,0 +1,103 @@
+:root {
+  --grid-columns: 12;
+  --gutter: 15px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Базовый контейнер */
+.container {
+  width: 100%;
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+}
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+@media (min-width: 1200px) {
+  .container { max-width: 1170px; }
+}
+
+/* Сетка на Grid */
+.row {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--gutter);
+  margin-right: calc(-1 * var(--gutter));
+  margin-left: calc(-1 * var(--gutter));
+}
+
+/* Общие классы колонок */
+[class^="col-"] {
+  grid-column: span var(--grid-columns);
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+}
+
+/* Генерация колонок (1-12) */
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+/* Адаптивные классы */
+/* sm (≥576px) */
+@media (min-width: 576px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+/* md (≥768px) */
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+/* lg (≥992px) */
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+/* xl (≥1200px) */
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+/* Отступы */
+.mt-1 { margin-top: 0.25rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+
+/* Вспомогательные классы */
+.d-flex { display: flex !important; }
+.justify-content-center { justify-content: center !important; }
+.align-items-center { align-items: center !important; }
+.text-center { text-align: center !important; }

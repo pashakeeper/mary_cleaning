@@ -1,0 +1,16 @@
+@use  "_grid";
+@use  "_reset";
+
+:root {
+    --font-family: "ABeeZee", sans-serif;
+    --font-size: 18px;
+    --font-weight: 400;
+    --main-color-1: #3793A2;
+    --btn-color: #EDAD03;
+}
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--main-color-3);
+}
