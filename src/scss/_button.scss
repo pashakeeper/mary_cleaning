@@ -1,0 +1,34 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 49px;
+  padding: 0 17px;
+  width: fit-content;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+.main_btn {
+  background-color: var(--btn-color);
+  position: relative;
+  &:after {
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: rgba(255, 255, 255, .1);
+    transition: all .5s ease;
+    border-radius: 10px;
+  }
+  &:hover {
+    box-shadow: 0 0 5px #ca9303;
+    &:after {
+      width: 100%;
+    }
+  }
+}
