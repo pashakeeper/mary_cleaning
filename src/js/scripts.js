@@ -58,7 +58,7 @@ $(document).ready(function () {
         }
     });
     $(".burger").click(function () {
-        $(".mobile-menu").toggleClass("active");
+        $(".menu_box").toggleClass("active");
         $(this).toggleClass("open");
     });
 });
