@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const languages = [
-        {value: 'en', img: '../img/flag-gb.svg', alt: 'English'},
-        {value: 'en', img: '../img/flag-gb.svg', alt: 'Spanish'},
+        {value: 'en', img: 'img/flag-gb.svg', alt: 'English'},
+        {value: 'en', img: 'img/flag-gb.svg', alt: 'Spanish'},
     ];
 
 
