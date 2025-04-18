@@ -4,6 +4,7 @@ $(document).ready(function () {
         {value: 'en', img: '../img/flag-gb.svg', alt: 'Spanish'},
     ];
 
+
     $('.language, .language_mobile').each(function () {
         const $language = $(this);
         const $hiddenInput = $language.find('input[type="hidden"]');
